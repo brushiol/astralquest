@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AstralQuest</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <style>
+        /* Center the image */
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Disable anti-aliasing for images */
+
+        img {
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: none;
+            image-rendering: -moz-crisp-edges;
+            /* Firefox */
+            image-rendering: -webkit-optimize-contrast;
+            /* WebKit (non-Firefox) */
+            image-rendering: -o-crisp-edges;
+            /* Opera */
+            image-rendering: pixelated;
+            /* CSS4 (currently unsupported) */
+            image-rendering: crisp-edges;
+            /* CSS4 (currently unsupported) */
+        }
+    </style>
+
+    <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        div.container p.credits {
+            position: absolute;
+            top: 900px;
+            left: 945px;
+            font-family: monospace;
+            font-size: 10px;
+            text-decoration: none;
+            text-transform: none;
+            color: dimgray;
+            text-shadow: -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+
+        div.boxbax {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.lightbox {
+            position: relative;
+            top: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #581845;">
+    <div class="container" style="text-align: center;">
+        <div class="boxbax" style="background-color: #81406E; display:; absolute; top:5%; height: 1250px; width: 800px;">
+            <div class="lightbox" style="background-color: #B381A5; display:; position: absolute; top:2%; height: 1000px; width: 600px;">
+                <p class="credits">website made by brushiol, art and writing made by cosmobals</p>
+                <a class="next" href="page1.html"><img src="astralquestfront.png" style="position: absolute; top:5%; right:8.5%; width: 500px; height: 900px;"></a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
