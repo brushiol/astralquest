@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AstralQuest</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <style>
+      /* Center the image */
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Disable anti-aliasing for images */
+      img {
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
+        image-rendering: -moz-crisp-edges;
+        /* Firefox */
+        image-rendering: -webkit-optimize-contrast;
+        /* WebKit (non-Firefox) */
+        image-rendering: -o-crisp-edges;
+        /* Opera */
+        image-rendering: pixelated;
+        /* CSS4 (currently unsupported) */
+        image-rendering: crisp-edges;
+        /* CSS4 (currently unsupported) */
+      }
+    </style>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div.container p.title {
+        position: relative;
+        top: -30px;
+        font-family: monospace;
+        font-size: 40px;
+        text-decoration: none;
+        text-transform: none;
+        color: black;
+      }
+
+      div.container p.bottom {
+        position: relative;
+        top: 225px;
+        font-family: monospace;
+        font-size: 24px;
+        text-decoration: none;
+        text-transform: none;
+        color: black;
+      }
+	  div.container p.bottom.spoiler-visible {
+ 		top: 315px;
+	  }
+
+      div.container p.credits {
+        position: absolute;
+        top: 900px;
+        left: 945px;
+        font-family: monospace;
+        font-size: 10px;
+        text-decoration: none;
+        text-transform: none;
+        color: dimgray;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+
+      div.container a.back {
+        position: absolute;
+        top: 750px;
+        left: 5px;
+      }
+
+      div.container a.next {
+        position: absolute;
+        top: 750px;
+        left: 500px;
+      }
+
+      div.container input {
+        position: absolute;
+        top: 780px;
+        left: 200px;
+      }
+
+      div.container button.gobutt {
+        position: absolute;
+        top: 780px;
+        left: 370px;
+      }
+
+      div.chatcont {
+        position: relative;
+        height: 500px;
+        margin-top: 200px;
+      }
+
+      div.boxbax {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div.lightbox {
+        position: relative;
+        top: 17px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #581845;">
+    <div class="container" style="text-align: center;">
+      <div class="boxbax" style="background-color: #81406E; display:; height: 950px; width: 800px;">
+        <div class="lightbox" style="background-color: #B381A5; display:; height: 850px; width: 600px;">
+          <p class="title">AstralQuest</p>
+          <div class="pagenumber" style="display:; height: 100px; width: 200px;">
+            <input type="text" id="page-number" name="page-number">
+            <button class="gobutt" onclick="goToPage()">Go</button>
+            <script>
+              function goToPage() {
+                var pageNumber = document.getElementById("page-number").value;
+                if (pageNumber !== "" && !isNaN(pageNumber)) {
+                  window.location.href = "page" + pageNumber + ".html";
+                }
+              }
+            </script>
+          </div>
+          <a class="next" href="page8.html">
+            <img src="https://brushiol.github.io/jubilantduplicate/data/images/nextgg.png" alt="Next">
+          </a>
+          <a class="back" href="page6.html">
+            <img src="https://brushiol.github.io/jubilantduplicate/data/images/backgg.png" alt="Back">
+          </a>
+          <p class="bottom">Huh? A fellow troll friend has sent you a message.</p>
+          <div style="position: relative; margin-top: 130px; border: 1px dashed white; padding: 1px;">
+            <button type="button" class="button" onclick="togglePesterlog(this);" title="Click to toggle the pesterlog visibility">Show Pesterlog</button>
+            <div class="spoiler" style="display: none; text-align: center;">
+              <table width="90%" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                  <td width="100%" valign="bottom">
+                    <p style="margin-left: 20px; text-align: left;font-weight: bold; font-family: courier, monospace; color: #000000;">
+                      <span style="color: black;">ecstaticSchizoprenic started trolling treasuredAbhor</span>
+                    </p>
+                    <p style="margin-left: 20px; text-align: left; font-weight: bold; font-family: courier, monospace; color: #000000;">
+                      <span style="color: black;">EB: hello vioJak!11!1</span>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <script>
+            function togglePesterlog(button) {
+  				var spoilerDiv = button.nextElementSibling;
+  				spoilerDiv.style.display = spoilerDiv.style.display === "none" ? "" : "none";
+				var bottomParagraph = document.querySelector('.container p.bottom');
+  				bottomParagraph.classList.toggle('spoiler-visible');
+			}
+          </script>
+          <p class="credits">website made by brushiol, art and writing made by cosmobals</p>
+          <img src="https://media.discordapp.net/attachments/1090026800496771282/1109579924735541391/Untitled582_20230428144157.png?width=863&height=598" style="position: absolute; top:9%; right:8.5%; width: 467px; height: 337px;">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
