@@ -59,7 +59,7 @@
         color: black;
       }
 	  div.container p.bottom.spoiler-visible {
- 		top: 315px;
+ 		top: 335px;
 	  }
 
       div.container p.credits {
@@ -140,8 +140,8 @@
             <img src="https://brushiol.github.io/jubilantduplicate/data/images/backgg.png" alt="Back">
           </a>
           <p class="bottom">Huh? A fellow troll friend has sent you a message.</p>
-          <div style="position: relative; margin-top: 130px; border: 1px dashed white; padding: 1px;">
-            <button type="button" class="button" onclick="togglePesterlog(this);" title="Click to toggle the pesterlog visibility">Show Pesterlog</button>
+          <div style="background-color: gainsboro; position: relative; margin-top: 130px; border: 1.3px dashed dimgray; padding: 1px;">
+            <button type="button" class="button" style="margin-top: 0px;" onclick="togglePesterlog(this);" title="Click to toggle the pesterlog visibility">Show Pesterlog</button>
             <div class="spoiler" style="display: none; text-align: center;">
               <table width="90%" border="0" cellpadding="3" cellspacing="0">
                 <tr>
@@ -150,7 +150,7 @@
                       <span style="color: black;">ecstaticSchizoprenic started trolling treasuredAbhor</span>
                     </p>
                     <p style="margin-left: 20px; text-align: left; font-weight: bold; font-family: courier, monospace; color: #000000;">
-                      <span style="color: black;">EB: hello vioJak!11!1</span>
+                      <span style="color: teal;">ES: hello vioJak!11!1</span>
                     </p>
                   </td>
                 </tr>
@@ -161,8 +161,12 @@
             function togglePesterlog(button) {
   				var spoilerDiv = button.nextElementSibling;
   				spoilerDiv.style.display = spoilerDiv.style.display === "none" ? "" : "none";
-				var bottomParagraph = document.querySelector('.container p.bottom');
+
+  				var bottomParagraph = document.querySelector('.container p.bottom');
   				bottomParagraph.classList.toggle('spoiler-visible');
+
+  				var buttonClass = document.querySelector('.container button.button');
+  				buttonClass.style.marginTop = spoilerDiv.style.display === "none" ? "0" : "20px";
 			}
           </script>
           <p class="credits">website made by brushiol, art and writing made by cosmobals</p>
